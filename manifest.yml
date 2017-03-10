@@ -1,0 +1,16 @@
+---
+declared-services:
+  my-conversation-service:
+    label: conversation
+    plan: free
+applications:
+- name: convo-simple2
+  command: npm start
+  path: .
+  memory: 256M
+  instances: 1
+  services:
+  - convo-simple2
+  env:
+    NPM_CONFIG_PRODUCTION: false
+    WORKSPACE_ID: 32b128aa-001a-45e2-84a0-817351d060db
